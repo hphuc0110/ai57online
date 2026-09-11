@@ -1,6 +1,5 @@
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
-import RegistrationSection from './components/RegistrationSection'
 import ExpertQuoteSection from './components/ExpertQuoteSection'
 import RegistrationModal from './components/registration/RegistrationModal'
 import PartnersSection from './components/PartnersSection'

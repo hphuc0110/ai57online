@@ -1,5 +1,4 @@
 import BorderedImage from './BorderedImage'
-import BrandLogo from '../BrandLogo'
 
 export default function FacultyFeature() {
   return (
