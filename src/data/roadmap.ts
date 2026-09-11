@@ -351,7 +351,7 @@ export const roadmapLevels: LevelData[] = [
         number: 2,
         title: 'PYTHON FOR DATA SCIENCE & MACHINE LEARNING FOUNDATIONS',
         description:
-          'Từ Python/Colab, tư duy dữ liệu & EDA đến supervised/unsupervised ML, metric, CV và pipeline scale — kèm 7 workshop thực hành kết thúc bằng AI Prediction Lab (From Data to Decision).',
+          'Từ Python/Colab, tư duy dữ liệu & EDA đến supervised/unsupervised ML, metric, CV và pipeline scale — 3 workshop thực hành (Python & Data) và 4 workshop advanced kết thúc bằng AI Prediction Lab (From Data to Decision).',
         duration: '60 GIỜ (30 BUỔI)',
         theoryMeta: '4.000.000 VNĐ',
         theorySessions: [
@@ -416,7 +416,7 @@ export const roadmapLevels: LevelData[] = [
             deliverable: 'Sơ đồ ML Pipeline scale & Project Brief Customer Segmentation.',
           },
         ],
-        workshopMeta: '07 Workshop / 30 buổi',
+        workshopMeta: '03 Workshop / 16 buổi',
         workshops: [
           {
             code: 'WS1',
@@ -455,10 +455,13 @@ export const roadmapLevels: LevelData[] = [
               { session: 'Buổi 16', title: 'EDA Workflow & Storytelling', deliverable: 'EDA Report (5 biểu đồ, 5 insight, tóm tắt).' },
             ],
           },
+        ],
+        advancedWorkshopMeta: '04 Workshop Advanced',
+        advancedWorkshops: [
           {
             code: 'WS4',
             title: 'Machine Learning Foundations',
-            meta: '4 buổi / 8 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 17', title: 'Khám phá bài toán ML', deliverable: 'Bảng phân loại 12 tình huống & sơ đồ 3 loại ML.' },
               { session: 'Buổi 18', title: 'Tách X/y & Baseline Model', deliverable: 'Baseline Notebook & checklist chống data leakage.' },
@@ -469,7 +472,7 @@ export const roadmapLevels: LevelData[] = [
           {
             code: 'WS5',
             title: 'Supervised Learning',
-            meta: '5 buổi / 10 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 21', title: 'kNN & Naive Bayes', deliverable: 'Bảng thí nghiệm tham số kNN/Naive Bayes.' },
               { session: 'Buổi 22', title: 'Linear Regression', deliverable: 'Regression Notebook & bảng metric MAE/MSE/R².' },
@@ -481,7 +484,7 @@ export const roadmapLevels: LevelData[] = [
           {
             code: 'WS6',
             title: 'Unsupervised Learning',
-            meta: '2 buổi / 4 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 26', title: 'K-Means & PCA 2D', deliverable: 'Cluster Profile + biểu đồ PCA 2D + lý do chọn k.' },
               { session: 'Buổi 27', title: 'Anomaly Detection', deliverable: 'Unsupervised Case Notebook + Anomaly log.' },
@@ -490,7 +493,7 @@ export const roadmapLevels: LevelData[] = [
           {
             code: 'WS7',
             title: 'AI Prediction Lab: From Data to Decision',
-            meta: '3 buổi / 6 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 28', title: 'Problem Framing & Discovery', deliverable: 'Problem Brief + Data Audit + Clean Dataset + Feature List.' },
               { session: 'Buổi 29', title: 'Prediction Model Sprint', deliverable: 'Prediction Notebook + Model Benchmark + Selection Note.' },
@@ -505,7 +508,7 @@ export const roadmapLevels: LevelData[] = [
         number: 3,
         title: 'ADVANCED MACHINE LEARNING & DEEP LEARNING',
         description:
-          'Nền toán cho ML/DL (vector, PCA, gradient, tối ưu, xác suất, Bayes) kết hợp 7 workshop: Advanced ML, Feature Engineering, Ensemble, Neural Network, PyTorch, CV/NLP intro và Capstone.',
+          'Nền toán cho ML/DL (vector, PCA, gradient, tối ưu, xác suất, Bayes) — 3 workshop thực hành (Advanced ML, Feature Engineering, Ensemble) và 4 workshop advanced (Neural Network, PyTorch, CV/NLP intro, Capstone).',
         duration: '60 GIỜ (30 BUỔI)',
         theoryMeta: '4.000.000 VNĐ',
         theorySessions: [
@@ -570,7 +573,7 @@ export const roadmapLevels: LevelData[] = [
             deliverable: 'One-page Math Checklist áp dụng cho pipeline dự án.',
           },
         ],
-        workshopMeta: '07 Workshop / 30 buổi',
+        workshopMeta: '03 Workshop / 15 buổi',
         workshops: [
           {
             code: 'WS1',
@@ -608,10 +611,13 @@ export const roadmapLevels: LevelData[] = [
               { session: 'Buổi 4', title: 'Decision Board', deliverable: 'Ensemble Benchmark + Decision Memo.' },
             ],
           },
+        ],
+        advancedWorkshopMeta: '04 Workshop Advanced',
+        advancedWorkshops: [
           {
             code: 'WS4',
             title: 'Neural Network Foundations',
-            meta: '5 buổi / 10 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 1', title: 'Single Neuron & Activation', deliverable: 'Single-neuron Notebook + Activation plots.' },
               { session: 'Buổi 2', title: 'Dense Layer & MLP', deliverable: 'MLP Forward Notebook + Shape Map.' },
@@ -623,7 +629,7 @@ export const roadmapLevels: LevelData[] = [
           {
             code: 'WS5',
             title: 'Deep Learning with PyTorch',
-            meta: '5 buổi / 10 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 1', title: 'Tensor, Autograd & Data Pipeline', deliverable: 'Tensor/Autograd lab + DataLoader Notebook.' },
               { session: 'Buổi 2', title: 'nn.Module & Architecture', deliverable: 'DNN Skeleton + One-step training check.' },
@@ -635,7 +641,7 @@ export const roadmapLevels: LevelData[] = [
           {
             code: 'WS6',
             title: 'Introduction to CV, NLP & Transformers',
-            meta: '2 buổi / 4 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 1', title: 'Computer Vision Pipeline', deliverable: 'CV Mini-Demo + Error Examples.' },
               { session: 'Buổi 2', title: 'NLP & Transformers', deliverable: 'NLP/Transformer Mini-Demo + Concept Map.' },
@@ -644,7 +650,7 @@ export const roadmapLevels: LevelData[] = [
           {
             code: 'WS7',
             title: 'Capstone Project',
-            meta: '3 buổi / 6 giờ',
+            meta: 'Advanced',
             sessions: [
               { session: 'Buổi 1', title: 'Design Review', deliverable: 'Project Brief + Experiment Plan + Repo Skeleton.' },
               { session: 'Buổi 2', title: 'Build & Evaluate', deliverable: 'Working Project + Experiment Table + Error Analysis.' },

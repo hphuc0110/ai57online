@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { getWorkshopPrice, type ModuleData, type WorkshopBlock } from '../data/roadmap'
-import WorkshopDetailModal from './WorkshopDetailModal'
+import WorkshopDetailPanel from './WorkshopDetailPanel'
 
 interface ModuleCardProps {
   module: ModuleData
@@ -30,6 +30,7 @@ function PathCard({
   selected,
   onSelect,
   className = '',
+  variant = 'default',
 }: {
   title: string
   subtitle?: string
@@ -38,15 +39,23 @@ function PathCard({
   selected?: boolean
   onSelect: () => void
   className?: string
+  variant?: 'default' | 'advanced'
 }) {
+  const borderSelected =
+    variant === 'advanced'
+      ? 'border-advanced ring-2 ring-advanced/30'
+      : 'border-primary ring-2 ring-primary/30'
+  const borderIdle =
+    variant === 'advanced'
+      ? 'border-advanced/25 hover:border-advanced/50 hover:shadow-md'
+      : 'border-primary/15 hover:border-primary/40 hover:shadow-md'
+
   return (
     <button
       type="button"
       onClick={onSelect}
       className={`flex shrink-0 flex-col overflow-hidden rounded-lg border text-left shadow-sm transition ${className} ${
-        selected
-          ? 'border-primary ring-2 ring-primary/30'
-          : 'border-primary/15 hover:border-primary/40 hover:shadow-md'
+        selected ? borderSelected : borderIdle
       }`}
     >
       <div className="flex min-h-[108px] flex-1 flex-col items-center justify-center gap-1 bg-white px-3 py-4">
@@ -73,6 +82,10 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
 
   const advancedWorkshops = module.advancedWorkshops ?? []
   const advancedMeta = module.advancedWorkshopMeta ?? 'Đang cập nhật'
+
+  function toggleWorkshop(ws: WorkshopBlock) {
+    setSelectedWorkshop((current) => (current?.code === ws.code ? null : ws))
+  }
 
   return (
     <article className="overflow-hidden rounded-2xl border border-primary/15 bg-white shadow-sm">
@@ -170,24 +183,30 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
               {module.workshopMeta} · Nhấn workshop để xem chi tiết
             </p>
 
-            <div
-              className={`grid gap-3 ${
-                theoryOpen
-                  ? 'grid-cols-1'
-                  : 'grid-cols-1 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3'
-              }`}
-            >
-              {module.workshops.map((ws, i) => (
-                <PathCard
-                  key={ws.code}
-                  title={shortWorkshopTitle(ws.title)}
-                  footer={getWorkshopPrice(module.number)}
-                  footerClass={WS_FOOTER_COLORS[i % WS_FOOTER_COLORS.length]}
-                  selected={selectedWorkshop?.code === ws.code}
-                  onSelect={() => setSelectedWorkshop(ws)}
-                  className="w-full"
-                />
-              ))}
+            <div className="space-y-3">
+              {module.workshops.map((ws, i) => {
+                const open = selectedWorkshop?.code === ws.code
+                return (
+                  <div key={ws.code}>
+                    <PathCard
+                      title={shortWorkshopTitle(ws.title)}
+                      footer={getWorkshopPrice(module.number)}
+                      footerClass={WS_FOOTER_COLORS[i % WS_FOOTER_COLORS.length]}
+                      selected={open}
+                      onSelect={() => toggleWorkshop(ws)}
+                      className="w-full"
+                    />
+                    {open && (
+                      <WorkshopDetailPanel
+                        module={module}
+                        workshop={ws}
+                        levelLetter={levelLetter}
+                        onClose={() => setSelectedWorkshop(null)}
+                      />
+                    )}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -200,36 +219,40 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
           </p>
 
           {advancedWorkshops.length > 0 ? (
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {advancedWorkshops.map((ws, i) => (
-                <PathCard
-                  key={ws.code}
-                  title={shortWorkshopTitle(ws.title)}
-                  footer={getWorkshopPrice(module.number, true)}
-                  footerClass={WS_FOOTER_COLORS[(i + 3) % WS_FOOTER_COLORS.length]}
-                  selected={selectedWorkshop?.code === ws.code}
-                  onSelect={() => setSelectedWorkshop(ws)}
-                  className="w-full"
-                />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {advancedWorkshops.map((ws) => (
+                  <PathCard
+                    key={ws.code}
+                    title={shortWorkshopTitle(ws.title)}
+                    footer={getWorkshopPrice(module.number, true)}
+                    footerClass="bg-advanced"
+                    selected={selectedWorkshop?.code === ws.code}
+                    onSelect={() => toggleWorkshop(ws)}
+                    className="w-full"
+                    variant="advanced"
+                  />
+                ))}
+              </div>
+
+              {selectedWorkshop &&
+                advancedWorkshops.some((w) => w.code === selectedWorkshop.code) && (
+                  <WorkshopDetailPanel
+                    module={module}
+                    workshop={selectedWorkshop}
+                    levelLetter={levelLetter}
+                    onClose={() => setSelectedWorkshop(null)}
+                  />
+                )}
+            </>
           ) : (
-            <div className="flex min-h-[108px] flex-col items-center justify-center rounded-lg border border-dashed border-primary/25 bg-primary-light/20 px-3 py-4 text-center">
+            <div className="flex min-h-[108px] flex-col items-center justify-center rounded-lg border border-dashed border-advanced/40 bg-advanced/10 px-3 py-4 text-center">
               <span className="text-sm font-bold text-hero-navy/70">Nội dung đang cập nhật</span>
               <span className="mt-1 text-[11px] text-gray-500">Sẽ bổ sung workshop advanced sau</span>
             </div>
           )}
         </div>
       </div>
-
-      {selectedWorkshop && (
-        <WorkshopDetailModal
-          module={module}
-          workshop={selectedWorkshop}
-          levelLetter={levelLetter}
-          onClose={() => setSelectedWorkshop(null)}
-        />
-      )}
     </article>
   )
 }

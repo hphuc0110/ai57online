@@ -51,6 +51,22 @@ function WorkshopDetailInner() {
   }
 
   const { module, level } = found
+  const accentBg = isAdvanced ? 'bg-advanced' : 'bg-primary'
+  const accentText = isAdvanced ? 'text-advanced' : 'text-primary'
+  const softBg = isAdvanced ? 'bg-advanced/15' : 'bg-primary-light/50'
+  const softHover = isAdvanced ? 'hover:bg-advanced/15' : 'hover:bg-primary-light/40'
+  const softOpen = isAdvanced ? 'bg-advanced/15' : 'bg-primary-light/40'
+  const softBorder = isAdvanced ? 'border-advanced/20' : 'border-primary/15'
+  const softBorderT = isAdvanced ? 'border-advanced/15' : 'border-primary/10'
+  const ringMeta = isAdvanced
+    ? 'text-advanced ring-1 ring-advanced/25'
+    : 'text-primary ring-1 ring-primary/20'
+  const btnPrimary = isAdvanced
+    ? 'bg-advanced shadow-lg shadow-advanced/25 transition hover:brightness-95'
+    : 'bg-primary shadow-lg shadow-primary/25 transition hover:bg-primary-dark'
+  const btnOutline = isAdvanced
+    ? 'border-advanced text-advanced hover:bg-advanced/10'
+    : 'border-primary text-primary hover:bg-primary-light'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-light/50 via-white to-white">
@@ -58,7 +74,7 @@ function WorkshopDetailInner() {
       <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14">
         <Link
           to="/lo-trinh"
-          className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline"
+          className={`inline-flex items-center gap-1 text-sm font-bold ${accentText} hover:underline`}
         >
           ← Quay lại lộ trình đào tạo
         </Link>
@@ -67,10 +83,10 @@ function WorkshopDetailInner() {
           <span className="rounded-md bg-hero-navy px-2.5 py-1 text-xs font-extrabold uppercase text-white">
             {level.letter} · Module {module.number}
           </span>
-          <span className="rounded-md bg-primary px-2.5 py-1 text-xs font-extrabold text-white">
+          <span className={`rounded-md ${accentBg} px-2.5 py-1 text-xs font-extrabold text-white`}>
             {workshop.code}
           </span>
-          <span className="rounded-md bg-white px-2.5 py-1 text-xs font-bold text-primary ring-1 ring-primary/20">
+          <span className={`rounded-md bg-white px-2.5 py-1 text-xs font-bold ${ringMeta}`}>
             {workshop.meta}
           </span>
           <span className="rounded-md bg-accent px-2.5 py-1 text-xs font-extrabold text-white">
@@ -85,16 +101,18 @@ function WorkshopDetailInner() {
           {content.title}
         </h1>
 
-        <section className="mt-8 rounded-2xl border border-primary/15 bg-white p-5 shadow-sm sm:p-7">
+        <section className={`mt-8 rounded-2xl border ${softBorder} bg-white p-5 shadow-sm sm:p-7`}>
           <h2 className="text-lg font-extrabold text-hero-navy">Nội dung workshop</h2>
           <p className="mt-1 text-sm text-gray-500">Bạn sẽ học và thực hành những nội dung sau:</p>
           <ul className="mt-5 space-y-3">
             {content.items.map((item, i) => (
               <li
                 key={i}
-                className="flex gap-3 rounded-xl bg-primary-light/50 px-4 py-3 text-[15px] leading-relaxed text-gray-800"
+                className={`flex gap-3 rounded-xl ${softBg} px-4 py-3 text-[15px] leading-relaxed text-gray-800`}
               >
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-extrabold text-white">
+                <span
+                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${accentBg} text-xs font-extrabold text-white`}
+                >
                   {i + 1}
                 </span>
                 <span className="pt-0.5">{item}</span>
@@ -103,7 +121,7 @@ function WorkshopDetailInner() {
           </ul>
         </section>
 
-        <section className="mt-8 rounded-2xl border border-primary/15 bg-white p-5 shadow-sm sm:p-7">
+        <section className={`mt-8 rounded-2xl border ${softBorder} bg-white p-5 shadow-sm sm:p-7`}>
           <h2 className="text-lg font-extrabold text-hero-navy">Lộ trình từng buổi</h2>
           <p className="mt-1 text-sm text-gray-500">Nhấn vào buổi học để xem sản phẩm đầu ra</p>
 
@@ -111,20 +129,22 @@ function WorkshopDetailInner() {
             {workshop.sessions.map((session, i) => {
               const open = activeSession === i
               return (
-                <div key={session.session} className="overflow-hidden rounded-xl border border-primary/15">
+                <div key={session.session} className={`overflow-hidden rounded-xl border ${softBorder}`}>
                   <button
                     type="button"
                     onClick={() => setActiveSession(open ? null : i)}
-                    className="flex w-full items-start gap-3 px-4 py-3.5 text-left transition hover:bg-primary-light/40"
+                    className={`flex w-full items-start gap-3 px-4 py-3.5 text-left transition ${softHover}`}
                   >
-                    <span className="shrink-0 rounded bg-primary px-2 py-1 text-[11px] font-extrabold text-white">
+                    <span
+                      className={`shrink-0 rounded ${accentBg} px-2 py-1 text-[11px] font-extrabold text-white`}
+                    >
                       {session.session}
                     </span>
                     <span className="min-w-0 flex-1 text-sm font-bold text-hero-navy sm:text-[15px]">
                       {session.title}
                     </span>
                     <svg
-                      className={`mt-1 h-4 w-4 shrink-0 text-primary transition-transform ${open ? 'rotate-180' : ''}`}
+                      className={`mt-1 h-4 w-4 shrink-0 ${accentText} transition-transform ${open ? 'rotate-180' : ''}`}
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden
@@ -137,8 +157,10 @@ function WorkshopDetailInner() {
                     </svg>
                   </button>
                   {open && (
-                    <div className="border-t border-primary/10 bg-primary-light/40 px-4 py-3 text-sm leading-relaxed text-gray-700">
-                      <span className="font-bold text-primary">Đầu ra: </span>
+                    <div
+                      className={`border-t ${softBorderT} ${softOpen} px-4 py-3 text-sm leading-relaxed text-gray-700`}
+                    >
+                      <span className={`font-bold ${accentText}`}>Đầu ra: </span>
                       {session.deliverable}
                     </div>
                   )}
@@ -152,13 +174,13 @@ function WorkshopDetailInner() {
           <button
             type="button"
             onClick={openRegistration}
-            className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-primary/25 transition hover:bg-primary-dark"
+            className={`inline-flex min-h-[48px] items-center justify-center rounded-xl px-6 py-3 text-sm font-bold uppercase tracking-wide text-white ${btnPrimary}`}
           >
             Đăng ký tư vấn
           </button>
           <Link
             to="/lo-trinh"
-            className="inline-flex min-h-[48px] items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-sm font-bold text-primary transition hover:bg-primary-light"
+            className={`inline-flex min-h-[48px] items-center justify-center rounded-xl border-2 px-6 py-3 text-sm font-bold transition ${btnOutline}`}
           >
             Xem toàn bộ lộ trình
           </Link>

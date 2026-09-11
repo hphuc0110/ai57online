@@ -14,8 +14,8 @@ export default function HeroContent() {
         <span className="text-card-end">57</span>
       </h1>
 
-      <p className="mt-3 text-lg font-extrabold uppercase tracking-wide text-primary sm:mt-4 sm:text-xl md:text-2xl">
-        Ươm mầm cho Học viện AI cho VIệt Nam
+      <p className="mt-3 text-lg font-extrabold uppercase tracking-wide text-primary-dark sm:mt-4 sm:text-xl md:text-2xl">
+        KỸ SƯ AI TOÀN NĂNG
       </p>
       <p className="mt-1 text-lg text-gray-900 sm:text-xl md:text-2xl">
       </p>

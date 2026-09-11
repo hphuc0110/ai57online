@@ -19,7 +19,7 @@ const outcomes = [
 export default function HeroOutcomes() {
   return (
     <div className="mt-8 sm:mt-10">
-      <h2 className="text-sm font-extrabold uppercase tracking-wide text-primary sm:text-base">
+      <h2 className="text-sm font-extrabold uppercase tracking-wide text-primary-dark sm:text-base">
         Đầu ra toàn khoá
       </h2>
 

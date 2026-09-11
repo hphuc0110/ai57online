@@ -1,6 +1,6 @@
 export default function NvidiaFeatureCard() {
   return (
-    <div className="overflow-hidden rounded-[20px] bg-gradient-to-r from-green-600 via-green-500 to-lime-400 shadow-xl">
+    <div className="overflow-hidden rounded-[20px] bg-[#76b900] shadow-xl">
       <div className="grid items-center gap-6 p-5 sm:gap-8 sm:p-8 md:grid-cols-2 md:p-10">
         <div>
           <h3 className="text-xl font-extrabold text-white sm:text-2xl md:text-3xl">

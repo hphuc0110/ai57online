@@ -1,11 +1,11 @@
 .thank-you-page {
-  --blue: #1769c4;
-  --blue-deep: #0c3f7e;
-  --blue-bright: #4fa8e8;
-  --cyan: #7fd0ff;
+  --blue: #69CDF5;
+  --blue-deep: #69CDF5;
+  --blue-bright: #69CDF5;
+  --cyan: #69CDF5;
   --red: #d11e2a;
   --ink: #0b2440;
-  --muted: #a9c6e6;
+  --muted: #69CDF5;
   --line: rgba(255, 255, 255, 0.16);
 
   box-sizing: border-box;
@@ -14,7 +14,7 @@
   z-index: 50;
   min-height: 100dvh;
   font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(155deg, #0c3f7e 0%, #1769c4 55%, #1e7ad4 100%);
+  background: linear-gradient(155deg, #69CDF5 0%, #69CDF5 55%, #69CDF5 100%);
   color: #fff;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@
 .thank-you-page .ai-bg .g1 {
   width: min(420px, 70vw);
   height: min(420px, 70vw);
-  background: #4fa8e8;
+  background: #69CDF5;
   top: -120px;
   left: -80px;
 }
@@ -58,7 +58,7 @@
 .thank-you-page .ai-bg .g2 {
   width: min(380px, 65vw);
   height: min(380px, 65vw);
-  background: #7fd0ff;
+  background: #69CDF5;
   bottom: -140px;
   right: -90px;
   opacity: 0.3;
@@ -72,12 +72,12 @@
 }
 
 .thank-you-page .ai-bg line {
-  stroke: rgba(127, 208, 255, 0.22);
+  stroke: rgba(105, 205, 245, 0.22);
   stroke-width: 1;
 }
 
 .thank-you-page .ai-bg circle {
-  fill: #7fd0ff;
+  fill: #69CDF5;
 }
 
 .thank-you-page .node {
@@ -98,8 +98,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(127, 208, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(127, 208, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(105, 205, 245, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(105, 205, 245, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 72%);
 }
@@ -169,8 +169,8 @@
   margin: 0 auto 26px;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle at 50% 40%, rgba(127, 208, 255, 0.35), rgba(23, 105, 196, 0.1));
-  border: 1px solid rgba(127, 208, 255, 0.6);
+  background: radial-gradient(circle at 50% 40%, rgba(105, 205, 245, 0.35), rgba(105, 205, 245, 0.1));
+  border: 1px solid rgba(105, 205, 245, 0.6);
   animation: thank-you-pop 0.5s 0.25s cubic-bezier(0.2, 1.4, 0.4, 1) both;
 }
 
@@ -308,14 +308,14 @@
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease;
-  box-shadow: 0 10px 26px rgba(79, 168, 232, 0.45);
+  box-shadow: 0 10px 26px rgba(105, 205, 245, 0.45);
   min-height: 48px;
   line-height: 1.25;
 }
 
 .thank-you-page .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 32px rgba(79, 168, 232, 0.55);
+  box-shadow: 0 16px 32px rgba(105, 205, 245, 0.55);
 }
 
 .thank-you-page .btn:active {

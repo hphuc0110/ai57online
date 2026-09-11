@@ -55,7 +55,7 @@ function FeatureBlock({
         <BorderedImage src={image} alt={imageAlt} />
       </div>
       <div className={reverse ? 'order-2 lg:order-1' : ''}>
-        <h3 className="text-xl font-extrabold text-primary sm:text-2xl">{title}</h3>
+        <h3 className="text-xl font-extrabold text-primary-dark sm:text-2xl">{title}</h3>
         <div className="mt-4 space-y-3 text-sm leading-relaxed text-gray-700 md:text-base">{children}</div>
       </div>
     </div>
@@ -195,7 +195,7 @@ export default function HLEContent() {
                 key={value.title}
                 className="rounded-2xl border border-primary/15 bg-primary-light/40 p-5 transition hover:border-primary/30 hover:bg-primary-light/70 sm:p-6"
               >
-                <h3 className="text-lg font-extrabold text-primary">{value.title}</h3>
+                <h3 className="text-lg font-extrabold text-primary-dark">{value.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-700">{value.description}</p>
               </div>
             ))}

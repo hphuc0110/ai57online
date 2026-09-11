@@ -46,7 +46,7 @@ function BenefitItem({
 }) {
   return (
     <li className="flex gap-4">
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-light shadow-[0_0_12px_rgba(0,86,210,0.2)]">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-light shadow-[0_0_12px_rgba(105,205,245,0.2)]">
         {icon}
       </span>
       <div>
