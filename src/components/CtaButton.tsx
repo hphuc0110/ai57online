@@ -1,4 +1,5 @@
 import type { MouseEvent, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import { useRegistrationModal } from '../context/RegistrationModalContext'
 
 interface CtaButtonProps {
@@ -49,6 +50,14 @@ export default function CtaButton({
   }
 
   if (href) {
+    const isInternal = href.startsWith('/') && !href.startsWith('//')
+    if (isInternal) {
+      return (
+        <Link to={href} className={classes}>
+          {children}
+        </Link>
+      )
+    }
     return (
       <a href={href} className={classes}>
         {children}

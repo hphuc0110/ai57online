@@ -1,12 +1,13 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import CtaButton from './CtaButton'
 import BrandLogo from './BrandLogo'
 
 const navLinks = [
-  { href: '/hle', label: 'VỀ HLE' },
-  { href: '/#about', label: 'VỀ AI57' },
-  { href: '/lo-trinh', label: 'LỘ TRÌNH' },
-  { href: '/faq', label: 'FAQ' },
+  { to: '/hle', label: 'VỀ HLE' },
+  { to: '/#about', label: 'VỀ AI57' },
+  { to: '/lo-trinh', label: 'LỘ TRÌNH' },
+  { to: '/faq', label: 'FAQ' },
 ]
 
 export default function Header() {
@@ -15,23 +16,23 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-white/90 backdrop-blur-md supports-[padding:max(0px)]:pt-[env(safe-area-inset-top)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2.5 sm:px-4 sm:py-3 md:px-6">
-        <a href="/#about" className="flex min-w-0 items-center gap-1.5 sm:gap-2.5 md:gap-3">
+        <Link to="/#about" className="flex min-w-0 items-center gap-1.5 sm:gap-2.5 md:gap-3">
           <BrandLogo
             brand="ai57"
             alt="AI57"
             className="h-8 w-auto shrink-0 object-contain sm:h-10"
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
+            <Link
+              key={link.to}
+              to={link.to}
               className="text-sm font-semibold text-gray-700 hover:text-primary"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -66,14 +67,14 @@ export default function Header() {
         <nav className="border-t border-primary/10 bg-white px-3 py-2 sm:px-4 md:hidden">
           <ul className="space-y-0.5">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
+              <li key={link.to}>
+                <Link
+                  to={link.to}
                   onClick={() => setMenuOpen(false)}
                   className="block rounded-lg px-3 py-3 text-sm font-semibold text-gray-700 transition hover:bg-primary-light hover:text-primary"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
