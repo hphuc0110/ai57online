@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { ModuleData, WorkshopBlock } from '../data/roadmap'
+import { getWorkshopPrice, type ModuleData, type WorkshopBlock } from '../data/roadmap'
 import WorkshopDetailModal from './WorkshopDetailModal'
 
 interface ModuleCardProps {
@@ -181,7 +181,7 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
                 <PathCard
                   key={ws.code}
                   title={shortWorkshopTitle(ws.title)}
-                  footer="4.000.000 đ"
+                  footer={getWorkshopPrice(module.number)}
                   footerClass={WS_FOOTER_COLORS[i % WS_FOOTER_COLORS.length]}
                   selected={selectedWorkshop?.code === ws.code}
                   onSelect={() => setSelectedWorkshop(ws)}
@@ -205,7 +205,7 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
                 <PathCard
                   key={ws.code}
                   title={shortWorkshopTitle(ws.title)}
-                  footer="4.000.000 đ"
+                  footer={getWorkshopPrice(module.number, true)}
                   footerClass={WS_FOOTER_COLORS[(i + 3) % WS_FOOTER_COLORS.length]}
                   selected={selectedWorkshop?.code === ws.code}
                   onSelect={() => setSelectedWorkshop(ws)}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { ModuleData, WorkshopBlock } from '../data/roadmap'
+import { getWorkshopPrice, type ModuleData, type WorkshopBlock } from '../data/roadmap'
 import { getWorkshopContent } from '../data/workshopContent'
 import { useRegistrationModal } from '../context/RegistrationModalContext'
 
@@ -19,6 +19,8 @@ export default function WorkshopDetailModal({
   const { openRegistration } = useRegistrationModal()
   const [activeSession, setActiveSession] = useState<number | null>(null)
   const content = getWorkshopContent(module.number, workshop.code)
+  const isAdvanced = workshop.meta === 'Advanced'
+  const priceLabel = getWorkshopPrice(module.number, isAdvanced)
 
   useEffect(() => {
     const prev = document.body.style.overflow
@@ -65,7 +67,7 @@ export default function WorkshopDetailModal({
                   {workshop.meta}
                 </span>
                 <span className="rounded-md bg-accent px-2.5 py-1 text-xs font-extrabold text-white">
-                  4.000.000 đ
+                  {priceLabel}
                 </span>
               </div>
               <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { roadmapLevels } from '../data/roadmap'
+import { getWorkshopPrice, roadmapLevels } from '../data/roadmap'
 import { getWorkshopContent } from '../data/workshopContent'
 import { useRegistrationModal, RegistrationModalProvider } from '../context/RegistrationModalContext'
 import RegistrationModal from '../components/registration/RegistrationModal'
@@ -22,8 +22,12 @@ function WorkshopDetailInner() {
   const [activeSession, setActiveSession] = useState<number | null>(null)
 
   const found = useMemo(() => findModule(moduleNumber), [moduleNumber])
-  const workshop = found?.module.workshops.find((w) => w.code === wsCode)
+  const workshop =
+    found?.module.workshops.find((w) => w.code === wsCode) ??
+    found?.module.advancedWorkshops?.find((w) => w.code === wsCode)
   const content = getWorkshopContent(moduleNumber, wsCode.toUpperCase())
+  const isAdvanced = workshop?.meta === 'Advanced'
+  const priceLabel = getWorkshopPrice(moduleNumber, isAdvanced)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -70,7 +74,7 @@ function WorkshopDetailInner() {
             {workshop.meta}
           </span>
           <span className="rounded-md bg-accent px-2.5 py-1 text-xs font-extrabold text-white">
-            4.000.000 đ
+            {priceLabel}
           </span>
         </div>
 

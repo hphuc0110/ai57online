@@ -41,6 +41,13 @@ export interface LevelData {
   modules: ModuleData[]
 }
 
+/** Giá hiển thị trên card / chi tiết workshop */
+export function getWorkshopPrice(moduleNumber: number, isAdvanced = false): string {
+  if (isAdvanced) return '5.000.000 đ'
+  if (moduleNumber >= 4) return 'Liên hệ'
+  return '4.000.000 đ'
+}
+
 export const roadmapLevels: LevelData[] = [
   {
     letter: 'A',
