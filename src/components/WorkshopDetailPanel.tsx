@@ -19,8 +19,8 @@ export default function WorkshopDetailPanel({
   const { openRegistration } = useRegistrationModal()
   const [activeSession, setActiveSession] = useState<number | null>(null)
   const content = getWorkshopContent(module.number, workshop.code)
-  const isAdvanced = workshop.meta === 'Advanced'
-  const priceLabel = getWorkshopPrice(module.number, isAdvanced)
+  const isAdvanced = Boolean(module.advancedWorkshops?.some((w) => w.code === workshop.code))
+  const priceLabel = getWorkshopPrice(module.number, workshop.code)
   const accentBg = isAdvanced ? 'bg-advanced' : 'bg-primary'
   const accentText = isAdvanced ? 'text-advanced' : 'text-primary'
   const accentBorder = isAdvanced ? 'border-advanced' : 'border-primary'

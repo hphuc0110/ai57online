@@ -26,8 +26,8 @@ function WorkshopDetailInner() {
     found?.module.workshops.find((w) => w.code === wsCode) ??
     found?.module.advancedWorkshops?.find((w) => w.code === wsCode)
   const content = getWorkshopContent(moduleNumber, wsCode.toUpperCase())
-  const isAdvanced = workshop?.meta === 'Advanced'
-  const priceLabel = getWorkshopPrice(moduleNumber, isAdvanced)
+  const isAdvanced = Boolean(found?.module.advancedWorkshops?.some((w) => w.code === wsCode))
+  const priceLabel = getWorkshopPrice(moduleNumber, wsCode)
 
   useEffect(() => {
     window.scrollTo(0, 0)

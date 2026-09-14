@@ -190,8 +190,12 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
                   <div key={ws.code}>
                     <PathCard
                       title={shortWorkshopTitle(ws.title)}
-                      footer={getWorkshopPrice(module.number)}
-                      footerClass={WS_FOOTER_COLORS[i % WS_FOOTER_COLORS.length]}
+                      footer={getWorkshopPrice(module.number, ws.code)}
+                      footerClass={
+                        module.number === 6
+                          ? 'bg-primary'
+                          : WS_FOOTER_COLORS[i % WS_FOOTER_COLORS.length]
+                      }
                       selected={open}
                       onSelect={() => toggleWorkshop(ws)}
                       className="w-full"
@@ -211,47 +215,39 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
           </div>
         </div>
 
-        <div>
-          <h5 className="text-base font-extrabold text-hero-navy">Khối Workshop Advanced</h5>
-          <p className="mt-0.5 mb-3 text-xs text-gray-500">
-            {advancedMeta}
-            {advancedWorkshops.length > 0 ? ' · Nhấn workshop để xem chi tiết' : ''}
-          </p>
+        {advancedWorkshops.length > 0 && (
+          <div>
+            <h5 className="text-base font-extrabold text-hero-navy">Khối Workshop Advanced</h5>
+            <p className="mt-0.5 mb-3 text-xs text-gray-500">
+              {advancedMeta} · Nhấn workshop để xem chi tiết
+            </p>
 
-          {advancedWorkshops.length > 0 ? (
-            <>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {advancedWorkshops.map((ws) => (
-                  <PathCard
-                    key={ws.code}
-                    title={shortWorkshopTitle(ws.title)}
-                    footer={getWorkshopPrice(module.number, true)}
-                    footerClass="bg-advanced"
-                    selected={selectedWorkshop?.code === ws.code}
-                    onSelect={() => toggleWorkshop(ws)}
-                    className="w-full"
-                    variant="advanced"
-                  />
-                ))}
-              </div>
-
-              {selectedWorkshop &&
-                advancedWorkshops.some((w) => w.code === selectedWorkshop.code) && (
-                  <WorkshopDetailPanel
-                    module={module}
-                    workshop={selectedWorkshop}
-                    levelLetter={levelLetter}
-                    onClose={() => setSelectedWorkshop(null)}
-                  />
-                )}
-            </>
-          ) : (
-            <div className="flex min-h-[108px] flex-col items-center justify-center rounded-lg border border-dashed border-advanced/40 bg-advanced/10 px-3 py-4 text-center">
-              <span className="text-sm font-bold text-hero-navy/70">Nội dung đang cập nhật</span>
-              <span className="mt-1 text-[11px] text-gray-500">Sẽ bổ sung workshop advanced sau</span>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {advancedWorkshops.map((ws) => (
+                <PathCard
+                  key={ws.code}
+                  title={shortWorkshopTitle(ws.title)}
+                  footer={getWorkshopPrice(module.number, ws.code)}
+                  footerClass="bg-advanced"
+                  selected={selectedWorkshop?.code === ws.code}
+                  onSelect={() => toggleWorkshop(ws)}
+                  className="w-full"
+                  variant="advanced"
+                />
+              ))}
             </div>
-          )}
-        </div>
+
+            {selectedWorkshop &&
+              advancedWorkshops.some((w) => w.code === selectedWorkshop.code) && (
+                <WorkshopDetailPanel
+                  module={module}
+                  workshop={selectedWorkshop}
+                  levelLetter={levelLetter}
+                  onClose={() => setSelectedWorkshop(null)}
+                />
+              )}
+          </div>
+        )}
       </div>
     </article>
   )

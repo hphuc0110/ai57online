@@ -54,6 +54,7 @@ export const workshopContents: WorkshopContent[] = [
       'Thiết lập môi trường làm việc và quy trình prompt → code → chạy thử.',
       'Xây dựng prototype nhanh, lặp cải tiến và dùng AI để debug.',
       'Hoàn thiện sản phẩm nhỏ và trình bày demo rõ ràng.',
+      'Đóng gói tài liệu bàn giao và reflection hướng mở rộng sản phẩm.',
     ],
   },
   {
@@ -65,17 +66,19 @@ export const workshopContents: WorkshopContent[] = [
       'Tạo nhân vật, bối cảnh và hình ảnh nhất quán xuyên suốt các cảnh.',
       'Thực hành text-to-video / image-to-video và quản lý thông số sinh.',
       'Dựng phim, bổ sung âm thanh và xuất bản kèm kiểm tra bản quyền.',
+      'Hoàn thiện bản phát hành cuối và đưa film vào portfolio cá nhân.',
     ],
   },
   {
     moduleNumber: 1,
     wsCode: 'ADV3',
-    title: 'Workflow agent',
+    title: 'Workflow Agent',
     items: [
       'Thiết kế luồng agent: mục tiêu, công cụ, vòng lặp quyết định và đầu ra.',
       'Nối các công cụ no-code/low-code để tự động hoá quy trình thực tế.',
       'Xử lý lỗi, giám sát và thiết lập quy tắc an toàn khi agent chạy.',
       'Tối ưu workflow và bàn giao hệ thống có thể vận hành được.',
+      'Xây runbook vận hành và kế hoạch mở rộng workflow.',
     ],
   },
   {
@@ -87,6 +90,7 @@ export const workshopContents: WorkshopContent[] = [
       'Tổ chức Projects, artifacts và ngữ cảnh tài liệu để Claude hỗ trợ hiệu quả.',
       'Thực hành phân tích, viết và lập kế hoạch đa bước với Claude.',
       'Chuẩn hoá template co-work để tái sử dụng cho nhóm hoặc dự án cá nhân.',
+      'Hoàn thiện team playbook và checklist bàn giao dự án co-work.',
     ],
   },
 
@@ -130,7 +134,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS4',
-    title: 'MACHINE LEARNING FOUNDATIONS',
+    title: 'Advanced Data Pipeline & Feature Engineering',
     items: [
       'Phân biệt Supervised Learning, Unsupervised Learning và Reinforcement Learning.',
       'Xác định feature, target và loại bài toán Machine Learning cần giải quyết.',
@@ -142,7 +146,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS5',
-    title: 'SUPERVISED LEARNING',
+    title: 'Advanced Supervised Learning & Model Optimization',
     items: [
       'Thực hành các mô hình kNN và Naive Bayes trên dữ liệu mẫu.',
       'Xây dựng mô hình Linear Regression và Logistic Regression.',
@@ -154,7 +158,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS6',
-    title: 'UNSUPERVISED LEARNING',
+    title: 'Advanced Unsupervised & Anomaly Analytics',
     items: [
       'Dùng K-Means để chia dữ liệu khách hàng thành các nhóm.',
       'Thử nhiều giá trị K và lựa chọn số cụm phù hợp.',
@@ -166,7 +170,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS7',
-    title: 'AI PREDICTION LAB: FROM DATA TO DECISION',
+    title: 'Advanced AI Prediction Capstone: From Model to Decision',
     items: [
       'Xây dựng mô hình dự đoán những khách hàng có khả năng ngừng sử dụng sản phẩm hoặc dịch vụ của doanh nghiệp (Customer Churn).',
       'Kiểm tra, làm sạch dữ liệu, thực hiện EDA và chọn các feature ban đầu.',
@@ -216,7 +220,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS4',
-    title: 'NEURAL NETWORK FOUNDATIONS: From Neuron to Backprop',
+    title: 'Advanced Machine Learning & Feature Engineering',
     items: [
       'Hiểu cách một neuron hoạt động và vai trò của các hàm activation.',
       'Tự xây dense layer và mạng nhiều lớp bằng NumPy.',
@@ -228,7 +232,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS5',
-    title: 'DEEP LEARNING WITH PYTORCH: Build & Train DNN',
+    title: 'Advanced Ensemble Learning & XGBoost',
     items: [
       'Làm quen với Tensor, Autograd, Dataset và DataLoader trong PyTorch.',
       'Xây dựng mô hình DNN bằng nn.Module và chọn loss, optimizer phù hợp.',
@@ -240,7 +244,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS6',
-    title: 'INTRODUCTION TO CV, NLP & TRANSFORMERS: Modern DL Survey',
+    title: 'Advanced Deep Learning with PyTorch, CV & Transformers',
     items: [
       'Làm quen với cách máy tính đọc và xử lý hình ảnh, đồng thời hiểu các bước cơ bản từ đưa ảnh vào hệ thống đến khi mô hình phân tích và trả kết quả.',
       'Chạy thử mô hình ảnh pretrained hoặc mini-CNN và xem các trường hợp dự đoán sai.',
@@ -252,7 +256,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS7',
-    title: 'CAPSTONE PROJECT: Real-World AI Application',
+    title: 'Capstone Project',
     items: [
       'Chọn một bài toán thực tế và xác định rõ dữ liệu, target, metric và baseline.',
       'Lập kế hoạch thí nghiệm và lựa chọn mô hình phù hợp với bài toán.',
@@ -266,7 +270,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS1',
-    title: 'Computer Vision & Image Processing Foundations',
+    title: 'Computer Vision, Convolution & Neural Network Foundations',
     items: [
       'Làm quen với cách máy tính lưu trữ hình ảnh dưới dạng các điểm ảnh (pixel), đồng thời hiểu sự khác nhau giữa ảnh màu RGB và ảnh xám.',
       'Thực hành resize, crop và normalize ảnh trước khi đưa vào mô hình.',
@@ -278,7 +282,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS2',
-    title: 'Optimization & Backpropagation for Vision',
+    title: 'Optimization, Backpropagation & Classical Computer Vision',
     items: [
       'Chuyển ảnh thành vector và xây lớp Dense đơn giản.',
       'Quan sát loss surface và hướng gradient khi mô hình học.',
@@ -290,7 +294,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS3',
-    title: 'Classical Computer Vision & PCA',
+    title: 'CNN, Detection, Segmentation & GPU System Foundations',
     items: [
       'Phân tích histogram và phát hiện điểm góc trên ảnh.',
       'Dùng PCA để giảm chiều, nén ảnh và khôi phục ảnh.',
@@ -302,7 +306,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS4',
-    title: 'Deep Learning & CNN for Image Classification',
+    title: 'Advanced CNN Training & Transfer Learning',
     items: [
       'So sánh MLP và CNN để hiểu vì sao CNN phù hợp hơn với dữ liệu ảnh.',
       'Xây dựng và huấn luyện một mạng CNN cơ bản.',
@@ -314,7 +318,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS5',
-    title: 'Object Detection & Segmentation',
+    title: 'Advanced Object Detection & Segmentation',
     items: [
       'Hiểu cách xác định vùng chứa đối tượng bằng khung bao (bounding box) và dùng chỉ số IoU để đo mức độ khớp giữa khung dự đoán với vị trí thật của đối tượng.',
       'Chạy mô hình YOLO hoặc SSD có sẵn và điều chỉnh confidence threshold, NMS.',
@@ -326,7 +330,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS6',
-    title: 'GPU Acceleration with CUDA & RAPIDS',
+    title: 'Advanced GPU Acceleration & Deployment',
     items: [
       'Hiểu sự khác nhau giữa CPU và GPU khi xử lý dữ liệu ảnh.',
       'Quan sát cách GPU xử lý nhiều phép tính song song.',
@@ -338,7 +342,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 4,
     wsCode: 'WS7',
-    title: 'Computer Vision Mini-Capstone Project',
+    title: 'Advanced Computer Vision Capstone Project',
     items: [
       'Chọn một bài toán nhỏ theo một trong ba hướng: classification, detection hoặc segmentation.',
       'Chuẩn bị dataset và xác định pipeline từ dữ liệu đến mô hình.',
@@ -352,7 +356,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS1',
-    title: 'NLP & Text Machine Learning Foundations',
+    title: 'NLP, Text Representation & Sequence Foundations',
     items: [
       'Làm quen với các bài toán xử lý văn bản và quy trình NLP từ dữ liệu đến mô hình.',
       'Thực hành làm sạch văn bản và chuyển văn bản thành dữ liệu số bằng Bag-of-Words và TF-IDF.',
@@ -364,7 +368,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS2',
-    title: 'Sequence Modeling & Deep Text Learning',
+    title: 'Transformers, LLMs & Generative AI Foundations',
     items: [
       'Hiểu dữ liệu dạng chuỗi, ngữ cảnh và cách RNN/LSTM xử lý văn bản.',
       'Xây dựng mô hình LSTM đơn giản cho bài toán phân loại cảm xúc văn bản.',
@@ -376,7 +380,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS3',
-    title: 'Transformers & LLM Fundamentals',
+    title: 'RAG, Conversational AI & Domain Assistant Foundations',
     items: [
       'Quan sát cách self-attention và Transformer xác định mối quan hệ giữa các từ trong câu.',
       'Phân biệt BERT, GPT và T5 theo loại bài toán phù hợp.',
@@ -388,7 +392,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS4',
-    title: 'Generative AI & Prompt Engineering',
+    title: 'Advanced Generative AI & Prompt Systems',
     items: [
       'Phân biệt mô hình dự đoán với mô hình Generative AI tạo nội dung mới.',
       'Điều chỉnh temperature và top-p để kiểm soát độ ổn định và sáng tạo của kết quả.',
@@ -400,7 +404,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS5',
-    title: 'Embeddings, Semantic Search & RAG',
+    title: 'Advanced RAG Systems & Retrieval Optimization',
     items: [
       'Dùng embedding để tìm các câu hoặc đoạn văn gần nhau về ý nghĩa.',
       'Xây dựng semantic search và trả về các kết quả gần nghĩa nhất theo top-k.',
@@ -412,7 +416,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS6',
-    title: 'Conversational AI & LLM Memory',
+    title: 'Advanced Conversational Agents & Memory',
     items: [
       'Hiểu các thành phần cơ bản của hội thoại như turn, intent, context và persona.',
       'Xây dựng FAQ Bot đơn giản bằng TF-IDF và cosine similarity để làm baseline.',
@@ -424,7 +428,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 5,
     wsCode: 'WS7',
-    title: 'Domain Expert AI Capstone Project',
+    title: 'Advanced Domain Expert AI Capstone Project',
     items: [
       'Chọn một lĩnh vực và bộ tài liệu phù hợp để xây dựng trợ lý AI chuyên môn hoặc Study Bot.',
       'Tạo embedding/index và xây hệ thống RAG dựa trên tài liệu đã chọn.',
@@ -438,7 +442,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS1',
-    title: 'AI Product Discovery & Capstone Framing',
+    title: 'AI Product Discovery, Architecture & Assisted Build Foundations',
     items: [
       'Làm quen với yêu cầu capstone, AI Sandbox và các công cụ hỗ trợ xây sản phẩm AI.',
       'Dùng AI coding assistant để đọc hiểu và chỉnh sửa những phần code đơn giản.',
@@ -450,7 +454,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS2',
-    title: 'AI Sandbox & Solution Architecture',
+    title: 'MVP, Observability, UX & Safety Foundations',
     items: [
       'Thử các starter có sẵn cho LLM/RAG, Vision và Anomaly.',
       'Làm quen với giao diện nhanh bằng Streamlit hoặc Gradio và kết nối thử với một hàm AI.',
@@ -462,7 +466,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS3',
-    title: 'AI Core Development & MVP Prototyping',
+    title: 'Evaluation, Optimization, Launch & Portfolio Foundations',
     items: [
       'Xây dựng phiên bản MVP đơn giản nhất của sản phẩm, có đủ các bước chính để người dùng nhập dữ liệu, hệ thống xử lý và trả ra kết quả hoàn chỉnh.',
       'Cải thiện chất lượng AI bằng prompt, rule hoặc threshold đơn giản.',
@@ -474,7 +478,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS4',
-    title: 'AI Product UX, Integration & Guardrails',
+    title: 'Advanced AI Product Architecture & Orchestration',
     items: [
       'Thiết kế giao diện đơn giản, rõ ràng và tập trung vào một mục tiêu, chức năng chính.',
       'Kết nối giao diện với AI core và xử lý các lỗi cơ bản để tránh ứng dụng bị crash.',
@@ -486,7 +490,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS5',
-    title: 'Evaluation, Optimization & Product Storytelling',
+    title: 'Advanced AI Quality, Safety & Optimization',
     items: [
       'Chọn 2-3 chỉ số phù hợp để đo chất lượng sản phẩm AI.',
       'Thử tối ưu tốc độ, chi phí hoặc chất lượng và so sánh kết quả trước/sau.',
@@ -498,7 +502,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS6',
-    title: 'Product Launch Readiness & Portfolio Packaging',
+    title: 'Advanced Launch, Product Operations & Portfolio',
     items: [
       'Sửa các lỗi còn lại và kiểm tra lại giao diện, các lớp bảo vệ an toàn, dữ liệu sử dụng và toàn bộ quy trình demo để đảm bảo sản phẩm hoạt động ổn định trước khi trình bày.',
       'Tạo AI Product One-Pager hoặc poster giới thiệu nhanh sản phẩm và đường dẫn/QR demo.',
@@ -509,7 +513,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 6,
     wsCode: 'WS7',
-    title: 'Capstone Demo Day & Reflection',
+    title: 'Advanced Capstone Technical Defense & Reflection',
     items: [
       'Trình bày sản phẩm AI hoàn chỉnh, chạy demo và trả lời Q&A trước hội đồng.',
       'Giải thích bài toán, kỹ thuật AI, trải nghiệm người dùng và giá trị của sản phẩm.',

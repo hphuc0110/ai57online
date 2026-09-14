@@ -1,5 +1,5 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useRegistrationModal } from '../../context/RegistrationModalContext'
 
 function FieldLabel({ children, required }: { children: ReactNode; required?: boolean }) {
   return (
@@ -34,9 +34,9 @@ const initialForm: FormData = {
 const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL
 
 export default function RegistrationForm({ inModal = false }: { inModal?: boolean }) {
-  const navigate = useNavigate()
+  const { closeRegistration } = useRegistrationModal()
   const [form, setForm] = useState<FormData>(initialForm)
-  const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'error' | 'success'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
   const update = (field: keyof FormData, value: string) => {
@@ -75,8 +75,11 @@ export default function RegistrationForm({ inModal = false }: { inModal?: boolea
     setErrorMsg('')
 
     try {
-      const response = await fetch(SCRIPT_URL, {
+      // text/plain tránh CORS preflight với Apps Script Web App.
+      // mode: 'no-cors' vì Apps Script redirect → trình duyệt không đọc được JSON response.
+      await fetch(SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
           studentName,
@@ -88,21 +91,41 @@ export default function RegistrationForm({ inModal = false }: { inModal?: boolea
         }),
       })
 
-      const result = (await response.json()) as { success?: boolean; message?: string }
-
-      if (!response.ok || result.success === false) {
-        throw new Error(result.message || 'Gửi thất bại')
+      setForm(initialForm)
+      setStatus('success')
+      if (inModal) {
+        window.setTimeout(() => closeRegistration(), 1800)
       }
-
-      navigate('/cam-on')
-    } catch (error) {
+    } catch {
       setStatus('error')
-      setErrorMsg(
-        error instanceof Error
-          ? error.message
-          : 'Không gửi được. Vui lòng thử lại sau hoặc liên hệ trực tiếp.',
-      )
+      setErrorMsg('Không gửi được. Vui lòng thử lại sau hoặc liên hệ trực tiếp.')
     }
+  }
+
+  if (status === 'success') {
+    return (
+      <div
+        className={
+          inModal
+            ? 'space-y-3 py-6 text-center'
+            : 'rounded-2xl border-t-[5px] border-r-[5px] border-primary border-l border-b border-gray-100 bg-white p-6 text-center shadow-xl sm:p-8'
+        }
+      >
+        <p className="text-lg font-extrabold text-primary-dark">Đăng ký thành công!</p>
+        <p className="text-sm text-gray-600">
+          Đội ngũ tư vấn sẽ liên hệ trong vòng 24h. Cảm ơn anh/chị đã tin tưởng AI57.
+        </p>
+        {!inModal && (
+          <button
+            type="button"
+            onClick={() => setStatus('idle')}
+            className="mt-2 text-sm font-semibold text-primary hover:underline"
+          >
+            Gửi đăng ký khác
+          </button>
+        )}
+      </div>
+    )
   }
 
   return (

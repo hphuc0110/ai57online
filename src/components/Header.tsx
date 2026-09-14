@@ -6,7 +6,7 @@ import BrandLogo from './BrandLogo'
 const navLinks = [
   { to: '/hle', label: 'VỀ HLE' },
   { to: '/#about', label: 'VỀ AI57' },
-  { to: '/lo-trinh', label: 'LỘ TRÌNH' },
+  { to: '/lo-trinh', label: 'LỘ TRÌNH ĐÀO TẠO ' },
   { to: '/faq', label: 'FAQ' },
 ]
 
