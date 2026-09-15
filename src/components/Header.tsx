@@ -7,6 +7,7 @@ const navLinks = [
   { to: '/hle', label: 'VỀ HLE' },
   { to: '/#about', label: 'VỀ AI57' },
   { to: '/lo-trinh', label: 'LỘ TRÌNH ĐÀO TẠO ' },
+  { to: '/tin-tuc', label: 'TIN TỨC' },
   { to: '/faq', label: 'FAQ' },
 ]
 

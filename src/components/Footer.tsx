@@ -4,6 +4,7 @@ const footerLinks = [
   { label: 'Về AI57', href: '/#about' },
   { label: 'Về Hồng Lĩnh Education', href: '/hle' },
   { label: 'Lộ trình học', href: '/lo-trinh' },
+  { label: 'Tin tức', href: '/tin-tuc' },
   { label: 'Câu hỏi thường gặp', href: '/faq' },
 ]
 

@@ -178,7 +178,7 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
           </div>
 
           <div>
-            <h5 className="text-base font-extrabold text-hero-navy">Khối Workshop Thực hành</h5>
+            <h5 className="text-base font-extrabold text-hero-navy">Khối Workshop Basic</h5>
             <p className="mt-0.5 mb-3 text-xs text-gray-500">
               {module.workshopMeta} · Nhấn workshop để xem chi tiết
             </p>

@@ -10,7 +10,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 1,
     wsCode: 'WS1',
-    title: 'PROMPT LAB: Hệ điều hành học tập cá nhân bằng AI',
+    title: 'Prompt Lab',
     items: [
       'Học cách viết prompt rõ ràng, có cấu trúc và cải thiện prompt qua từng version.',
       'So sánh kết quả của cùng một prompt trên nhiều mô hình AI để chọn công cụ phù hợp.',
@@ -22,7 +22,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 1,
     wsCode: 'WS2',
-    title: 'AI CREATIVE STUDIO: Sản xuất ảnh và video bằng GenAI',
+    title: 'AI Creative Studio',
     items: [
       'Học cách viết prompt để tạo ảnh AI theo đúng ý tưởng.',
       'Thực hành tạo cùng một hình ảnh trên nhiều nền tảng AI, sau đó so sánh kết quả để chọn công cụ cho chất lượng phù hợp nhất.',
@@ -35,7 +35,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 1,
     wsCode: 'WS3',
-    title: 'AI BUILDER: Generative UI, tác tử và dự án AI for Good',
+    title: 'AI Builder',
     items: [
       'Chọn một vấn đề thực tế và xây dựng ý tưởng dùng AI để hỗ trợ giải quyết vấn đề đó.',
       'Dùng prompt để tạo giao diện (UI) và chỉnh sửa giao diện theo yêu cầu cụ thể.',
@@ -98,7 +98,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS1',
-    title: 'PYTHON FUNDAMENTALS',
+    title: 'Python & Data Science Foundations',
     items: [
       'Làm quen với Google Colab và cách chạy một notebook Python.',
       'Thực hành cách khai báo và sử dụng biến, kiểu dữ liệu, chuỗi ký tự và các cấu trúc dữ liệu cơ bản trong Python.',
@@ -110,7 +110,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS2',
-    title: 'PYTHON FOR DATA ANALYSIS',
+    title: 'Machine Learning Core Models & Evaluation',
     items: [
       'Làm quen với NumPy và cách tính toán trên dữ liệu dạng mảng.',
       'Sử dụng pandas để đọc, kiểm tra và làm việc với dữ liệu dạng bảng.',
@@ -122,7 +122,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 2,
     wsCode: 'WS3',
-    title: 'DATA EXPLORATION & VISUALIZATION',
+    title: 'Unsupervised, End-to-End ML & Scale',
     items: [
       'Học cách đọc và hiểu các chỉ số thống kê cơ bản như giá trị trung bình, trung vị và độ lệch chuẩn để biết dữ liệu phân bố và thay đổi như thế nào.',
       'Vẽ các biểu đồ phổ biến bằng Matplotlib để mô tả dữ liệu.',
@@ -184,7 +184,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS1',
-    title: 'ADVANCED MACHINE LEARNING: Model Benchmark & Selection',
+    title: 'Data Representation & Linear Algebra for Machine Learning',
     items: [
       'Xác định bài toán Machine Learning, sử dụng những dữ liệu nào làm đầu vào và chọn chỉ số phù hợp để đánh giá mô hình hoạt động tốt đến đâu.',
       'Xây dựng mô hình baseline để làm mốc so sánh.',
@@ -196,7 +196,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS2',
-    title: 'FEATURE ENGINEERING & MODEL OPTIMIZATION: Reliable Pipeline Lab',
+    title: 'Gradient, Loss & Optimization for Learning',
     items: [
       'Kiểm tra các feature và phát hiện nguy cơ rò rỉ dữ liệu (data leakage).',
       'Tạo và cải thiện feature phù hợp với từng loại dữ liệu.',
@@ -208,7 +208,7 @@ export const workshopContents: WorkshopContent[] = [
   {
     moduleNumber: 3,
     wsCode: 'WS3',
-    title: 'ENSEMBLE LEARNING: Bagging, Boosting & XGBoost',
+    title: 'Probability, Statistics, Bayes & End-to-End Model Reasoning',
     items: [
       'Thực hành Bagging và Random Forest để kết hợp nhiều cây quyết định.',
       'Thực hành Boosting bằng cách kết hợp nhiều mô hình nhỏ, trong đó mỗi mô hình mới tập trung sửa những lỗi mà mô hình trước còn dự đoán chưa tốt.',
