@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "google-khoi-sac-dau-thang-9",
+    "title": "Google khởi sắc đầu tháng 9 sau chuỗi giảm điểm dài nhất thập kỷ",
+    "excerpt": "Cổ phiếu Alphabet đã lấy lại đà tăng trưởng trong tuần đầu tháng 9, sau chuỗi giảm điểm theo tháng dài nhất trong hơn một thập kỷ, nhờ động thái đồng thời trên sản phẩm, thương mại và pháp lý.",
+    "date": "2026-09-05",
+    "category": "Thị trường",
+    "coverImage": "/images/news/1.png"
+  },
+  {
+    "slug": "sam-altman-openai-robot-hinh-nguoi",
+    "title": "Sam Altman xác nhận OpenAI đang phát triển robot hình người",
+    "excerpt": "CEO OpenAI lần đầu xác nhận công khai công ty sẽ tự sản xuất robot hình người — bước chuyển so với chiến lược trước đây chỉ cung cấp \"trí não\" AI cho các hãng robot khác.",
+    "date": "2026-09-06",
+    "category": "Robotics",
+    "coverImage": "/images/news/2.png"
+  },
+  {
+    "slug": "robot-openai-chinh-thuc-hay-don-doan",
+    "title": "Robot hình người của OpenAI — đã chính thức hay vẫn chỉ là đồn đoán?",
+    "excerpt": "Phân tích chỉ ra khoảng cách giữa phát ngôn của Sam Altman về robot hình người và một sản phẩm thực sự sẵn sàng thương mại hóa, đồng thời cảnh báo thận trọng trước các tiêu đề mang tính suy diễn.",
+    "date": "2026-09-07",
+    "category": "Robotics",
+    "coverImage": "/images/news/3.png"
+  },
+  {
+    "slug": "nvidia-loi-the-tu-chip-sang-von",
+    "title": "Lợi thế cạnh tranh của Nvidia đang chuyển từ chip sang vốn",
+    "excerpt": "Thay vì chỉ dựa vào ưu thế công nghệ chip, Nvidia đang tận dụng sức mạnh tài chính như công cụ chiến lược mới để duy trì vị thế dẫn đầu trong ngành AI.",
+    "date": "2026-09-08",
+    "category": "Thị trường",
+    "coverImage": "/images/news/4.png"
+  },
+  {
+    "slug": "nvidia-tang-hon-10-phan-tram",
+    "title": "Nvidia tăng hơn 10% trong tuần khi nỗi lo \"bong bóng AI\" hạ nhiệt",
+    "excerpt": "Cổ phiếu Nvidia phục hồi mạnh mẽ chỉ một tuần sau đợt bán tháo do lo ngại định giá ngành bán dẫn AI, nhờ thông tin bất ngờ từ SpaceX.",
+    "date": "2026-09-09",
+    "category": "Thị trường",
+    "coverImage": "/images/news/5.png"
+  },
+  {
+    "slug": "my-cao-buoc-alibaba-deepseek",
+    "title": "Mỹ cáo buộc Alibaba, DeepSeek \"đánh cắp có hệ thống\" công nghệ AI",
+    "excerpt": "Ba cơ quan an ninh hàng đầu Mỹ đồng loạt cáo buộc các công ty AI Trung Quốc khai thác trái phép công nghệ Mỹ ở quy mô công nghiệp, đúng trước thềm thượng đỉnh Mỹ – Trung.",
+    "date": "2026-09-10",
+    "category": "Địa chính trị",
+    "coverImage": "/images/news/6.png"
+  },
+  {
+    "slug": "trung-quoc-tung-loat-mo-hinh-ma-nguon-mo",
+    "title": "Trung Quốc tung loạt mô hình mã nguồn mở, khiến các hãng AI Mỹ lo ngại",
+    "excerpt": "Chỉ trong vài ngày, hai công ty công nghệ hàng đầu Trung Quốc liên tiếp ra mắt các mô hình AI mới, đẩy cuộc đua mã nguồn mở toàn cầu lên một nấc thang mới.",
+    "date": "2026-09-11",
+    "category": "Công nghệ",
+    "coverImage": "/images/news/7.png"
+  },
+  {
+    "slug": "qwen-alibaba-vuot-meta-google",
+    "title": "Mô hình mã nguồn mở Qwen của Alibaba vượt Meta, Google về quy mô toàn cầu",
+    "excerpt": "Báo cáo từ Hugging Face cho thấy các phòng thí nghiệm AI Trung Quốc liên tục dẫn đầu về quy mô mô hình mã nguồn mở trong suốt năm 2026.",
+    "date": "2026-09-11",
+    "category": "Công nghệ",
+    "coverImage": "/images/news/8.png"
+  },
+  {
+    "slug": "cuoc-dua-ai-trung-quoc-chi-phi-van-hanh",
+    "title": "Cuộc đua AI Trung Quốc chuyển sang \"mặt trận\" chi phí vận hành",
+    "excerpt": "Các công ty công nghệ Trung Quốc giờ đây cạnh tranh khốc liệt trên mặt trận chi phí vận hành AI cho doanh nghiệp — yếu tố quyết định khả năng thương mại hóa quy mô lớn.",
+    "date": "2026-09-12",
+    "category": "Công nghệ",
+    "coverImage": "/images/news/9.png"
+  },
+  {
+    "slug": "tong-hop-tin-robot-hinh-nguoi-thang-9",
+    "title": "Tổng hợp tin robot hình người tháng 9/2026: từ trình diễn đến thương mại hóa",
+    "excerpt": "Ngành robot hình người toàn cầu tăng tốc mạnh trong tháng 9, với dấu ấn từ sự kiện lớn lẫn bước tiến về sản lượng thương mại thực tế.",
+    "date": "2026-09-15",
+    "category": "Robotics",
+    "coverImage": "/images/news/10.png"
+  },
+  {
+    "slug": "toan-canh-nganh-robot-hinh-nguoi-2026",
+    "title": "Toàn cảnh ngành robot hình người 2026: khoảng cách giữa lời đồn và thực tế triển khai",
+    "excerpt": "Hơn 140 công ty đang sản xuất robot hình người, nhưng số liệu triển khai thực tế thường bị thổi phồng so với những gì công bố chính thức.",
+    "date": "2026-09-15",
+    "category": "Robotics",
+    "coverImage": "/images/news/11.png"
+  },
+  {
+    "slug": "sony-warner-kien-anthropic",
+    "title": "Sony Music và Warner kiện Anthropic, cáo buộc \"chiến dịch đánh cắp bản quyền táo bạo\"",
+    "excerpt": "Hai tập đoàn âm nhạc hàng đầu thế giới khởi kiện Anthropic, mở mặt trận pháp lý mới xoay quanh việc dùng nội dung có bản quyền để huấn luyện AI.",
+    "date": "2026-09-13",
+    "category": "Pháp lý",
+    "coverImage": "/images/news/12.png"
+  },
+  {
+    "slug": "vu-kien-ban-quyen-anthropic-keo-dai",
+    "title": "Vụ kiện bản quyền nhắm vào Anthropic có thể kéo dài nhiều năm",
+    "excerpt": "Giới quan sát nhận định vụ kiện Sony Music và Warner mới chỉ là \"phát súng mở màn\" cho cuộc chiến pháp lý dài hơi về bản quyền âm nhạc trong kỷ nguyên AI tạo sinh.",
+    "date": "2026-09-13",
+    "category": "Pháp lý",
+    "coverImage": "/images/news/13.png"
+  },
+  {
+    "slug": "round-hill-music-kien-suno-anthropic",
+    "title": "Round Hill Music kiện Suno và Anthropic, đòi bồi thường tới 1 tỷ USD",
+    "excerpt": "Nhà xuất bản âm nhạc độc lập mở rộng làn sóng kiện tụng bản quyền, nhắm đồng thời vào nền tảng tạo nhạc AI lẫn nhà cung cấp mô hình nền tảng.",
+    "date": "2026-09-14",
+    "category": "Pháp lý",
+    "coverImage": "/images/news/14.png"
+  },
+  {
+    "slug": "salesforce-anthropic-claudeforce",
+    "title": "Salesforce và Anthropic công bố \"ClaudeForce\": đưa Claude vào trung tâm hệ sinh thái Slack",
+    "excerpt": "Hai công ty mở rộng hợp tác chiến lược, đưa mô hình Claude trở thành \"bộ não\" mặc định xuyên suốt nền tảng làm việc Slack.",
+    "date": "2026-09-12",
+    "category": "Doanh nghiệp",
+    "coverImage": "/images/news/15.png"
+  },
+  {
+    "slug": "eu-thuc-thi-dao-luat-ai",
+    "title": "EU chính thức thực thi Đạo luật AI: kỷ nguyên giám sát AI ở châu Âu bắt đầu",
+    "excerpt": "Từ đầu tháng 8/2026, Liên minh châu Âu chính thức bước vào giai đoạn thực thi các quy định minh bạch đối với hệ thống trí tuệ nhân tạo.",
+    "date": "2026-09-02",
+    "category": "Quy định",
+    "coverImage": "/images/news/16.png"
+  },
+  {
+    "slug": "quoc-hoi-my-dung-sao-chep-luat-ai-chau-au",
+    "title": "Bài bình luận: Quốc hội Mỹ đừng sao chép luật AI của châu Âu",
+    "excerpt": "Việc châu Âu buộc phải lùi thời hạn thực thi phần quy định khó nhất trong Đạo luật AI được xem là bài học cảnh báo cho các nhà lập pháp Mỹ.",
+    "date": "2026-09-03",
+    "category": "Quy định",
+    "coverImage": "/images/news/17.png"
+  },
+  {
+    "slug": "quy-dinh-ai-toan-cau-thang-9-2026",
+    "title": "Quy định AI toàn cầu bước vào giai đoạn thực thi trong tháng 9/2026",
+    "excerpt": "Nhiều quốc gia và khu vực lớn đồng loạt chuyển từ chuẩn bị hành chính sang thực thi các quy định quản lý AI ngay trong tháng 9/2026.",
+    "date": "2026-09-15",
+    "category": "Quy định",
+    "coverImage": "/images/news/18.png"
+  },
+  {
+    "slug": "trung-quoc-dang-dan-dau-cuoc-dua-ai",
+    "title": "Có phải Trung Quốc đang dẫn đầu cuộc đua trí tuệ nhân tạo?",
+    "excerpt": "Trước loạt động thái công nghệ và chính trị gần đây, câu hỏi quốc gia nào đang thực sự dẫn đầu cuộc đua AI trở nên nóng hơn bao giờ hết.",
+    "date": "2026-09-14",
+    "category": "Địa chính trị",
+    "coverImage": "/images/news/19.png"
+  },
+  {
+    "slug": "anthropic-ga-khong-lo-dinh-gia-hang-tram-ty",
+    "title": "Anthropic: từ công ty an toàn AI đến \"gã khổng lồ\" được định giá hàng trăm tỷ USD",
+    "excerpt": "Dù đối mặt hàng loạt vụ kiện bản quyền, Anthropic vẫn thu hút khoản đầu tư khổng lồ và được đồn đoán tiến gần tới IPO ở mức định giá kỷ lục.",
+    "date": "2026-09-10",
+    "category": "Thị trường",
+    "coverImage": "/images/news/20.png"
+  }
+]

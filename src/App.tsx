@@ -18,7 +18,7 @@ function App() {
           <HeroSection />
           {/* <RegistrationSection /> */}
           <ExpertQuoteSection />
-          <PartnersSection />
+          {/* <PartnersSection /> */}
           <WhyAI57Section />
           <VideoSection />
         </main>

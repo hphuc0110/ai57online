@@ -23,7 +23,7 @@ export interface ModuleData {
   number: number;
   title: string;
   description: string;
-  duration: string;
+  // duration: string;
   theoryMeta: string;
   theorySessions: TheorySession[];
   workshopMeta: string;
@@ -117,7 +117,6 @@ export const roadmapLevels: LevelData[] = [
         title: "AI FOUNDATIONS & GENERATIVE LITERACY",
         description:
           "Xây nền tảng hiểu AI/GenAI, prompt engineering, GenAI thị giác, RAG & Study OS, Generative UI/tác tử, đạo đức & an toàn — kết hợp 10 buổi lý thuyết và 3 workshop thực hành (Prompt Lab, Creative Studio, AI Builder).",
-        duration: "60 GIỜ (30 BUỔI)",
         theoryMeta: "4.000.000 Đ",
         theorySessions: [
           {
@@ -459,7 +458,6 @@ export const roadmapLevels: LevelData[] = [
         title: "PYTHON FOR DATA SCIENCE & MACHINE LEARNING FOUNDATIONS",
         description:
           "Từ Python/Colab, tư duy dữ liệu & EDA đến supervised/unsupervised ML, metric, CV và pipeline scale — 3 workshop Basic (Python & Data Science Foundations, ML Core Models, Unsupervised & Scale) và 4 workshop Advanced kết thúc bằng AI Prediction Capstone.",
-        duration: "60 GIỜ (30 BUỔI)",
         theoryMeta: "5.000.000 Đ",
         theorySessions: [
           {
@@ -752,7 +750,6 @@ export const roadmapLevels: LevelData[] = [
         title: "ADVANCED MACHINE LEARNING & DEEP LEARNING",
         description:
           "Nền toán cho ML/DL (vector, PCA, gradient, tối ưu, xác suất, Bayes) — 3 workshop Basic (Data Representation & Linear Algebra, Gradient/Loss/Optimization, Probability/Bayes) và 4 workshop Advanced (Feature Engineering, Ensemble/XGBoost, PyTorch CV & Transformers, Capstone).",
-        duration: "60 GIỜ (30 BUỔI)",
         theoryMeta: "5.000.000 Đ",
         theorySessions: [
           {
@@ -1058,7 +1055,6 @@ export const roadmapLevels: LevelData[] = [
         title: "COMPUTER VISION, OPTIMIZATION & GPU ACCELERATION",
         description:
           "Từ ảnh số, convolution, tối ưu/backprop đến Classical CV, CNN, detection/segmentation và GPU/CUDA/RAPIDS — 7 workshop thực hành kết thúc Mini-Capstone Computer Vision.",
-        duration: "60 GIỜ (30 BUỔI)",
         theoryMeta: "6.000.000 Đ",
         theorySessions: [
           {
@@ -1353,7 +1349,6 @@ export const roadmapLevels: LevelData[] = [
         title: "GENERATIVE AI, LLMs & INTELLIGENT RAG SYSTEMS",
         description:
           "Từ NLP pipeline, embedding, RNN/Transformer đến LLM API, GenAI có trách nhiệm, Semantic Search/RAG và Conversational AI — kết thúc bằng Capstone Domain Expert AI / Study Bot.",
-        duration: "60 GIỜ (30 BUỔI)",
         theoryMeta: "6.000.000 Đ",
         theorySessions: [
           {
@@ -1653,7 +1648,6 @@ export const roadmapLevels: LevelData[] = [
         title: "APPLIED AI PRODUCT STUDIO & CAPSTONE",
         description:
           "Tư duy sản phẩm AI từ ý tưởng đến Demo Day: Design Thinking, kiến trúc, AI Sandbox, MVP, logging, UX, guardrails, storytelling và đóng gói portfolio — 7 workshop thực hành theo sprint.",
-        duration: "60 GIỜ (30 BUỔI)",
         theoryMeta: "10.000.000 Đ",
         theorySessions: [
           {

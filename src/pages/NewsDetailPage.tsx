@@ -2,10 +2,13 @@ import { useEffect, useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ShareFacebookButton from '../components/ShareFacebookButton'
 import StickyRegisterBar from '../components/StickyRegisterBar'
 import RegistrationModal from '../components/registration/RegistrationModal'
 import { RegistrationModalProvider } from '../context/RegistrationModalContext'
 import { formatNewsDate, getNewsBySlug, newsItems } from '../data/news'
+import { setPageMeta } from '../lib/setPageMeta'
+import { getArticleImageUrl, getArticleShareUrl } from '../lib/site'
 
 function NewsDetailInner() {
   const { slug = '' } = useParams()
@@ -19,11 +22,23 @@ function NewsDetailInner() {
       .slice(0, 3)
   }, [article])
 
+  const shareUrl = article ? getArticleShareUrl(article.slug) : ''
+
   useEffect(() => {
     window.scrollTo(0, 0)
-    if (article) {
-      document.title = `${article.title} — AI57`
+    if (!article) {
+      document.title = 'Không tìm thấy bài viết — AI57'
+      return
     }
+
+    setPageMeta({
+      title: `${article.title} — AI57`,
+      description: article.excerpt,
+      url: getArticleShareUrl(article.slug),
+      image: getArticleImageUrl(article.coverImage),
+      type: 'article',
+    })
+
     return () => {
       document.title = 'AI57'
     }
@@ -65,6 +80,10 @@ function NewsDetailInner() {
         </h1>
         <p className="mt-4 text-base leading-relaxed text-gray-600">{article.excerpt}</p>
 
+        <div className="mt-5">
+          <ShareFacebookButton url={shareUrl} title={article.title} />
+        </div>
+
         <div className="mt-8 overflow-hidden rounded-2xl border border-primary/15 bg-primary-light/30">
           <img
             src={article.coverImage}
@@ -91,6 +110,13 @@ function NewsDetailInner() {
             </div>
           ))}
         </article>
+
+        <div className="mt-10 rounded-2xl border border-primary/15 bg-white p-5 sm:p-6">
+          <p className="text-sm font-semibold text-gray-700">Chia sẻ bài viết này</p>
+          <div className="mt-3">
+            <ShareFacebookButton url={shareUrl} title={article.title} />
+          </div>
+        </div>
 
         {related.length > 0 && (
           <aside className="mt-14 border-t border-primary/15 pt-10">
