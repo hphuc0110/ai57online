@@ -4,9 +4,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
-const SITE_URL =
-  process.env.OG_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ai57online.vercel.app')
+const SITE_URL = process.env.OG_SITE_URL || 'https://ai57online.vercel.app'
 
 const distIndexPath = path.join(root, 'dist/index.html')
 const metaPath = path.join(root, 'api/news-meta.json')
