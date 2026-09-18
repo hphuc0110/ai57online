@@ -1,7 +1,7 @@
 const { readFileSync } = require('fs')
 const { join } = require('path')
 
-const SITE_URL = process.env.OG_SITE_URL || 'https://ai57online.vercel.app'
+const SITE_URL = process.env.OG_SITE_URL || 'https://ai57tuyensinh.honglinheducation.vn'
 const articles = JSON.parse(readFileSync(join(__dirname, 'news-meta.json'), 'utf8'))
 
 function escapeHtml(text) {
