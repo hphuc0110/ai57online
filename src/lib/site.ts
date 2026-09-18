@@ -1,5 +1,11 @@
-/** Canonical production origin for absolute share / OG URLs. */
-export const SITE_URL = 'https://tuyensinhai57.honglinheducation.vn'
+/** URL công khai đang phục vụ bản mới (có /images/news + /tin-tuc). */
+export const SITE_URL = 'https://ai57online.vercel.app'
+
+/**
+ * Domain thương hiệu — gắn lại sau khi trỏ DNS/Vercel về deployment mới.
+ * Hiện domain này vẫn đang serve bản cũ (thiếu ảnh news) nên chưa dùng cho OG/share.
+ */
+export const BRAND_SITE_URL = 'https://tuyensinhai57.honglinheducation.vn'
 
 export function getAbsoluteUrl(path: string): string {
   if (path.startsWith('http')) return path
@@ -10,7 +16,7 @@ export function getAbsoluteUrl(path: string): string {
   return `${origin}${path.startsWith('/') ? path : `/${path}`}`
 }
 
-/** Always use production URL so Facebook can scrape Open Graph tags. */
+/** Dùng host đang có file ảnh + trang bài để Facebook scrape được. */
 export function getArticleShareUrl(slug: string): string {
   return `${SITE_URL}/tin-tuc/${slug}`
 }
