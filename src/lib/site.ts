@@ -10,11 +10,20 @@ export function getAbsoluteUrl(path: string): string {
   return `${origin}${path.startsWith('/') ? path : `/${path}`}`
 }
 
+/** Prefer the domain the user is actually on (avoids stale hard-coded hosts). */
 export function getArticleShareUrl(slug: string): string {
-  return `${SITE_URL}/tin-tuc/${slug}`
+  const origin =
+    typeof window !== 'undefined' && window.location?.origin
+      ? window.location.origin
+      : SITE_URL
+  return `${origin}/tin-tuc/${slug}`
 }
 
 export function getArticleImageUrl(coverImage: string): string {
   if (coverImage.startsWith('http')) return coverImage
-  return `${SITE_URL}${coverImage.startsWith('/') ? coverImage : `/${coverImage}`}`
+  const origin =
+    typeof window !== 'undefined' && window.location?.origin
+      ? window.location.origin
+      : SITE_URL
+  return `${origin}${coverImage.startsWith('/') ? coverImage : `/${coverImage}`}`
 }

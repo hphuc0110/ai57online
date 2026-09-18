@@ -4,9 +4,12 @@ type ShareFacebookButtonProps = {
 }
 
 export default function ShareFacebookButton({ url, title }: ShareFacebookButtonProps) {
-
   const shareOnFacebook = () => {
-    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`
+    // Always share the live page URL so the domain matches what the user is browsing.
+    const target =
+      (typeof window !== 'undefined' && window.location?.href) ||
+      url
+    const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(target)}`
     window.open(shareUrl, 'facebook-share-dialog', 'width=600,height=480,noopener,noreferrer')
     window.fbq?.('trackCustom', 'Share', {
       content_name: title,
@@ -14,7 +17,6 @@ export default function ShareFacebookButton({ url, title }: ShareFacebookButtonP
       share_destination: 'facebook',
     })
   }
-
 
   return (
     <div className="flex flex-wrap items-center gap-2">
