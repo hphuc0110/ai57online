@@ -1,12 +1,9 @@
-import { useState } from 'react'
-
 type ShareFacebookButtonProps = {
   url: string
   title: string
 }
 
 export default function ShareFacebookButton({ url, title }: ShareFacebookButtonProps) {
-  const [copied, setCopied] = useState(false)
 
   const shareOnFacebook = () => {
     const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`

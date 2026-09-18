@@ -94,9 +94,6 @@ export default function ModuleCard({ module, levelLetter }: ModuleCardProps) {
           <span className="inline-flex items-center rounded-md bg-primary px-2.5 py-1 text-xs font-extrabold uppercase tracking-wide text-white">
             Module {module.number}
           </span>
-          <span className="inline-flex items-center rounded-md bg-white px-2.5 py-1 text-xs font-bold text-primary ring-1 ring-primary/20">
-            {module.duration}
-          </span>
         </div>
         <h4 className="mt-3 text-xl font-extrabold leading-snug text-hero-navy sm:text-2xl">
           {module.title}
