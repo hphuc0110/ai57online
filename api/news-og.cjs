@@ -1,10 +1,7 @@
-import { readFileSync } from 'fs'
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url'
+const { readFileSync } = require('fs')
+const { join } = require('path')
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
 const SITE_URL = 'https://tuyensinhai57.honglinheducation.vn'
-
 const articles = JSON.parse(readFileSync(join(__dirname, 'news-meta.json'), 'utf8'))
 
 function escapeHtml(text) {
@@ -15,7 +12,7 @@ function escapeHtml(text) {
     .replace(/"/g, '&quot;')
 }
 
-export default function handler(req, res) {
+module.exports = function handler(req, res) {
   const slug = typeof req.query.slug === 'string' ? req.query.slug : ''
   const article = articles.find((item) => item.slug === slug)
 
@@ -45,12 +42,12 @@ export default function handler(req, res) {
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${description}" />
   <meta property="og:image" content="${image}" />
+  <meta property="og:image:secure_url" content="${image}" />
   <meta property="og:image:alt" content="${escapeHtml(article.title)}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${title}" />
   <meta name="twitter:description" content="${description}" />
   <meta name="twitter:image" content="${image}" />
-  <meta http-equiv="refresh" content="0;url=${url}" />
 </head>
 <body>
   <p><a href="${url}">${escapeHtml(article.title)}</a></p>
